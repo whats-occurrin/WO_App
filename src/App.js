@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
 import firebase from 'firebase';
+import {auth} from './firebase';
 import { Button, Spinner } from './components/common';
 import Header from './components/Header';
 import EventList from './components/EventList';
@@ -13,16 +14,7 @@ class App extends Component {
   };
 
   componentWillMount() {
-    firebase.initializeApp({
-      apiKey: 'AIzaSyCQ7RL6-AStBt3f4YhSLh4el5aQH7HBSzw',
-      authDomain: 'whats-occurrin.firebaseapp.com',
-      databaseURL: 'https://whats-occurrin.firebaseio.com',
-      projectId: 'whats-occurrin',
-      storageBucket: 'whats-occurrin.appspot.com',
-      messagingSenderId: '104730148110'
-    });
-
-    firebase.auth().onAuthStateChanged((user) => {
+    auth.onAuthStateChanged((user) => {
       if (user) {
         this.setState({
           loggedIn: true
@@ -43,7 +35,7 @@ class App extends Component {
             Profile
 
             Event Categories 
-            
+
         </Button>
         );
       case false:
