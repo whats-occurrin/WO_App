@@ -14,7 +14,7 @@ class SignIn extends React.Component {
 
     onButtonPress () {
         const {email, password} = this.state;
-        this.setState = ({
+        this.setState({
             error: '',
             loading: true
         });
