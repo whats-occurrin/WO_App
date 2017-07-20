@@ -12,7 +12,8 @@ const Event = ({event}) => {
 
 const styles = {
     textStyle: {
-        fontSize: 14
+        fontSize: 20,
+        color: '#00897F'
     }
 };
 
