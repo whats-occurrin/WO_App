@@ -14,18 +14,10 @@ class EventList extends Component {
     render() {
         return (
             <ScrollView>
-                <Text style={styles.textStyle}>{'What\'s Occurring?'}</Text>
                 {this.renderEvents()}
             </ScrollView>
         );
     }
 }
-
-const styles = {
-    textStyle: {
-        fontSize: 20,
-        color: '#00897F'
-    }
-};
 
 export default EventList;

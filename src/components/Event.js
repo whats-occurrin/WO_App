@@ -1,20 +1,33 @@
 import React from 'react';
 import { Text, View } from 'react-native';
+import { Card, CardSection } from './fe_common';
 
-const Event = ({event}) => {
+const Event = ({ event }) => {
     return (
-        <View>
-            <Text style={styles.textStyle}>{event.location}</Text>
-            <Text style={styles.textStyle}>{event.eventDetails}</Text>
-        </View>
+        <Card>
+            <CardSection>
+                <View style={styles.headerContentStyle}>
+                    <Text style={styles.headerTextStyle}>{event.location}</Text>
+                    <Text style={styles.bodyTextStyle}>{event.eventDetails}</Text>
+                </View>
+            </CardSection>
+        </Card>
     );
 };
 
 const styles = {
-    textStyle: {
-        fontSize: 20,
-        color: '#00897F'
+    headerTextStyle: {
+        fontSize: 20
+    },
+    bodyTextStyle: {
+        fontSize: 16,
+        color: '#1595A3'
+    },
+    headerContentStyle: {
+        flexDirection: 'column',
+        justifyContent: 'space-around'
     }
 };
+
 
 export default Event;

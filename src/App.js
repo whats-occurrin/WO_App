@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
-import Header from './components/Header';
+import Header from './components/fe_common/Header';
 import EventList from './components/EventList';
 import Map from './components/Map';
 
