@@ -1,11 +1,23 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
+import { View, ScrollView } from 'react-native';
 import Event from './Event';
+import listOfEvents from './Fake_Data';
 
-const EventList = () => {
-    return (
-        <Event />
-    );
-};
+class EventList extends Component {
+   // state = { data: Fake_Data }
+
+    renderEvents() {
+        return listOfEvents.map(event =>
+            <Event key={event.id} event={event} />);
+    }
+
+    render() {
+        return (
+            <ScrollView>
+                {this.renderEvents()}
+            </ScrollView>
+        );
+    }
+}
 
 export default EventList;

@@ -1,10 +1,19 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { Text, View } from 'react-native';
 
-const Event = () => {
+const Event = ({event}) => {
     return (
-        <Text>Event!</Text>
+        <View>
+            <Text style={styles.textStyle}>{event.location}</Text>
+            <Text style={styles.textStyle}>{event.eventDetails}</Text>
+        </View>
     );
+};
+
+const styles = {
+    textStyle: {
+        fontSize: 14
+    }
 };
 
 export default Event;
