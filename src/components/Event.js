@@ -7,8 +7,8 @@ const Event = ({ event }) => {
         <Card>
             <CardSection>
                 <View style={styles.headerContentStyle}>
-                    <Text style={styles.headerTextStyle}>{event.location}</Text>
-                    <Text style={styles.bodyTextStyle}>{event.eventDetails}</Text>
+                    <Text style={styles.headerTextStyle}>{event.address}</Text>
+                    <Text style={styles.bodyTextStyle}>{event.title}</Text>
                 </View>
             </CardSection>
         </Card>
