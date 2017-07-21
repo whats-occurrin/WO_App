@@ -7,7 +7,7 @@ import Map from './components/Map';
 const App = () => (
   <View style={{ flex: 1 }}>
     <Header headerText={'What\'s Occurring?'} />
-    <Map />
+     <Map /> 
     <EventList />
   </View>
 
